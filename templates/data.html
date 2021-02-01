@@ -8,11 +8,15 @@
 
     <title>Bootstrap Visualization Dashboard</title>
 
-    <!-- Boostrap Stylesheet -->
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" media="screen">
+    <!--Datatables and jquary javascript-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.23/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.23/datatables.min.js"></script>
 
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" media="screen">
+    
     <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="static/css/styles.css" media="screen">
+    <link rel="stylesheet" href="./static/css/styles.css" media="screen">
 
   </head>
 
@@ -31,20 +35,22 @@
               <span class="icon-bar"></span>
             </button>
             <div class="col-xs-9 phone-nav">
-              <a class="navbar-brand" href="#" id="logo">Summary</a>
+              <a class="navbar-brand" href="/" id="logo">Summary</a>
             </div>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li><a href="visualizations">Visualizations</a></li>
+              <li><a href="correlation">Correlations</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Techniques <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                 <li><a href="visualizations/tree_mean">Mean Features Decision Tree</a></li>
-                  <li><a href="visualizations/tree_all">All Features Decision Tree</a></li>
-                  <li><a href="visualizations/knn_unscaled">Unscaled Nearest Neighbor</a></li>
-                  <li><a href="visualizations/knn_scaled">Scaled Nearest Neighbor</a></li>
+                 <li><a href="tree_mean">Mean Features Decision Tree</a></li>
+                  <li><a href="tree_all">All Features Decision Tree</a></li>
+                  <li><a href="knn_unscaled">Unscaled Nearest Neighbor</a></li>
+                  <li><a href="knn_scaled">Scaled Nearest Neighbor</a></li>
                 </ul>
               </li>
               <li><a href="conclusion">Conclusion</a></li>
@@ -60,25 +66,61 @@
     <div class="container">
       <section class="row">
         <div class="col-md-8">
-          <article class="description-content">
-            <h1 class="description-header">Data</h1>
-            <hr class="description-hr"/>
-            <img src="static/images/diagnosis_count.png" alt="" id="description-image"/>
-            <!--Add things here to display dataset-->
-          </article>
+            <article class="description-content">
+                <h1 class="description-header">Correlation of Mean Features</h1>
+                <table id="myTable" class ="display" style="width:100%">
+                  <thead>
+                      <th>id</th>
+                      <th>diagnosis</th>
+                      <th>radius_mean</th>
+                      <th>texture_mean</th>
+                      <th>perimeter_mean</th>
+                      <th>area_mean</th>
+                      <th>smoothness_mean</th>
+                      <th>compactness_mean</th>
+                      <th>concavity_mean</th>
+                      <th>concave_points_mean</th>
+                      <th>symmetry_mean</th>
+                      <th>fractal_dimension_mean</th>
+                      <th>radius_se</th>
+                      <th>texture_se</th>
+                      <th>perimeter_se</th>
+                      <th>area_se</th>
+                      <th>smoothness_se</th>
+                      <th>compactness_se</th>
+                      <th>concavity_se</th>
+                      <th>concave_points_se</th>
+                      <th>symmetry_se</th>
+                      <th>fractal_dimension_se</th>
+                      <th>radius_worst</th>
+                      <th>texture_worst</th>
+                      <th>perimeter_worst</th>
+                      <th>area_worst</th>
+                      <th>smoothness_worst</th>
+                      <th>compactness_worst</th>
+                      <th>concavity_worst</th>
+                      <th>concave_points_worst</th>
+                      <th>symmetry_worst</th>
+                      <th>fractal_dimension_worst</th>
+                  </thead>
+                  <tbody></tbody>
+              </table>
+              </article>
         </div>
         <div class="col-md-4">
 
           <!-- Start of Visualizations imageNav Area -->
           <section id="imageNav-area">
             <div class="imageNav-content">
-              <h2 class="imageNav-header">Visualizations</h2>
+              <h2 class="imageNav-header">Pages</h2>
               <hr />
               <div id="images">
-                <a href="visualizations/tree_mean"><img src="./static/images/tree_mean.png" alt="Mean Features Decision Tree" class="imageNav-photo"></a>
-                <a href="visualizations/tree_all"><img src="static/images/tree_all.png" alt="All Features Decision Tree" class="imageNav-photo"></a>
-                <a href="visualizations/knn_unscaled"><img src="static/images/knn_unscaled.png" alt="Unscaled Nearest Neighbors" class="imageNav-photo"></a>
-                <a href="visualizations/knn_scaled"><img src="static/images/knn_scaled.png" alt="Scaled Nearest Neighbors" class="imageNav-photo"></a>
+                <a href="visualizations"><img src="static/images/perimeter_mean_plot.png" alt="Visualizations" class="imageNav-photo"></a>
+                <a href="correlation"><img src="static/images/corr_mean.png" alt="Correlations" class="imageNav-photo"></a>
+                <a href="tree_mean"><img src="static/images/tree_mean.png" alt="Mean Features Decision Tree" class="imageNav-photo"></a>
+                <a href="tree_all"><img src="static/images/tree_all.png" alt="All Features Decision Tree" class="imageNav-photo"></a>
+                <a href="knn_unscaled"><img src="static/images/knn_unscaled.png" alt="Unscaled Nearest Neighbors" class="imageNav-photo"></a>
+                <a href="knn_scaled"><img src="static/images/knn_scaled.png" alt="Scaled Nearest Neighbors" class="imageNav-photo"></a>
               </div>
             </div>
           </section>

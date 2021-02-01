@@ -12,17 +12,17 @@ from sqlalchemy import create_engine, inspect, func
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 
-# database=os.environ.get("DATABASE_URL",'')
+database=os.environ.get("DATABASE_URL",'')
 
-# #create engine 
-# engine = create_engine(f'{database}')
-# #print(engine.table_names())
-# #Reflect database into ORM class
-# Base = automap_base()
-# Base.prepare(engine, reflect=True)
-# Stats=Base.classes.cancer_data
+#create engine 
+engine = create_engine(f'{database}')
+#print(engine.table_names())
+#Reflect database into ORM class
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+Stats=Base.classes.cancer_data
 
-# session = Session(engine)
+session = Session(engine)
 
 #create routes
 @app.route("/")
@@ -62,11 +62,11 @@ def tree_mean():
 def table():
     return render_template("data.html")
 
-# @app.route("/data.json")
-# def data():
-#     stmt=session.query(Stats).statement
-#     df=pd.read_sql_query(stmt,session.bind)
-#     return Response(df.to_json(orient="records"), mimetype='application/json')
+@app.route("/data.json")
+def data():
+    stmt=session.query(Stats).statement
+    df=pd.read_sql_query(stmt,session.bind)
+    return Response(df.to_json(orient="records"), mimetype='application/json')
 
 
 
