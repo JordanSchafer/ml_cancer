@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" media="screen">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="static/css/styles.css" media="screen">
+
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-9 phone-nav">
+              <a class="navbar-brand" href="landing" id="logo">Summary</a>
+            </div>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li><a href="visualizations">Visualizations</a></li>
+              <li><a href="correlation">Correlations</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Techniques <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                 <li><a href="tree_mean">Mean Features Decision Tree</a></li>
+                  <li><a href="tree_all">All Features Decision Tree</a></li>
+                  <li><a href="knn_unscaled">Unscaled Nearest Neighbor</a></li>
+                  <li><a href="knn_scaled">Scaled Nearest Neighbor</a></li>
+                </ul>
+              </li>
+              <li><a href="conclusion">Conclusion</a></li>
+              <li><a href="data">Data</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End of navbar -->
+
+    <!-- Start of container -->
+    <div class="container">
+      <section class="row">
+        <div class="col-md-8">
+            <article class="description-content">
+                <h1 class="description-header">Decision Tree for Non-correlated Features</h1>
+                <hr class="description-hr"/>
+                <img src="static/images/tree_all.png" alt="" class="img-responsive"/>
+                <p>The above image is the decision tree created based on a subset of the data using sklearn's DecisionTreeClassifier.</p>
+                <p>Due to the high <a href="correlation">correlation</a> between radius, perimeter, and area only one should be used as a feature; likewise for compactness, concavity, and concavepoint. </p>
+                <p>The desion tree first splits on x[13] which is perimeter_worst and has a gini score that seems reasonible. This means an importance is placed the perimeter_worst value, which is the largest perimeter length of a cell taken from a tumor. The decision tree had a score of 0.929, which is seems to be overfitted.</p>
+                <br>
+                <hr class="description-hr"/>
+                <br>
+                <h1 class="description-header">Random Forest for Non-correlated Features</h1>
+                <hr class="description-hr"/>
+                <p>Using sklearn's RandomForestClassifier, a random forest created based the same data subset using 200 trees to make a prediction. The RandomForestClassifier also placed importance on the perimeter_mean and scored 0.989. This score seems to imply overfitting of the data and other techniques could be used to rectify this problem.</p>
+
+              </article>
+        </div>
+        <div class="col-md-4">
+
+          <!-- Start of Visualizations imageNav Area -->
+          <section id="imageNav-area">
+            <div class="imageNav-content">
+              <h2 class="imageNav-header">Pages</h2>
+              <hr />
+              <div id="images">
+                <a href="visualizations"><img src="static/images/perimeter_mean_plot.png" alt="Visualizations" class="imageNav-photo"></a>
+                <a href="correlation"><img src="static/images/corr_mean.png" alt="Correlations" class="imageNav-photo"></a>
+                <a href="tree_mean"><img src="static/images/tree_mean.png" alt="Mean Features Decision Tree" class="imageNav-photo"></a>
+                <a href="tree_all"><img src="static/images/tree_all.png" alt="All Features Decision Tree" class="imageNav-photo"></a>
+                <a href="knn_unscaled"><img src="static/images/knn_unscaled.png" alt="Unscaled Nearest Neighbors" class="imageNav-photo"></a>
+                <a href="knn_scaled"><img src="static/images/knn_scaled.png" alt="Scaled Nearest Neighbors" class="imageNav-photo"></a>
+              </div>
+            </div>
+          </section>
+          <!-- End of the Visualizations imageNav Area -->
+
+        </div>
+      </section>
+    </div>
+    <!-- End of container -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
