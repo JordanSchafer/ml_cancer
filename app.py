@@ -62,11 +62,11 @@ def tree_mean():
 def table():
     return render_template("data.html")
 
-# @app.route("/data.json")
-# def data():
-#     stmt=session.query(Stats).statement
-#     df=pd.read_sql_query(stmt,session.bind)
-#     return Response(df.to_json(orient="records"), mimetype='application/json')
+@app.route("/data.json")
+def data():
+    stmt=session.query(Stats).statement
+    df=pd.read_sql_query(stmt,session.bind)
+    return Response(df.to_json(orient="records"), mimetype='application/json')
 
 
 
