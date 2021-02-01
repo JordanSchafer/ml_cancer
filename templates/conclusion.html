@@ -31,20 +31,22 @@
               <span class="icon-bar"></span>
             </button>
             <div class="col-xs-9 phone-nav">
-              <a class="navbar-brand" href="#" id="logo">Summary</a>
+              <a class="navbar-brand" href="/" id="logo">Summary</a>
             </div>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li><a href="visualizations">Visualizations</a></li>
+              <li><a href="correlation">Correlations</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Techniques <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                 <li><a href="visualizations/tree_mean">Mean Features Decision Tree</a></li>
-                  <li><a href="visualizations/tree_all">All Features Decision Tree</a></li>
-                  <li><a href="visualizations/knn_unscaled">Unscaled Nearest Neighbor</a></li>
-                  <li><a href="visualizations/knn_scaled">Scaled Nearest Neighbor</a></li>
+                 <li><a href="tree_mean">Mean Features Decision Tree</a></li>
+                  <li><a href="tree_all">All Features Decision Tree</a></li>
+                  <li><a href="knn_unscaled">Unscaled Nearest Neighbor</a></li>
+                  <li><a href="knn_scaled">Scaled Nearest Neighbor</a></li>
                 </ul>
               </li>
               <li><a href="conclusion">Conclusion</a></li>
@@ -60,26 +62,34 @@
     <div class="container">
       <section class="row">
         <div class="col-md-8">
-          <article class="description-content">
-            <h1 class="description-header">Summary: Predicting Cancer with ML</h1>
-            <hr class="description-hr"/>
-            <img src="static/images/diagnosis_count.png" alt="" id="description-image"/>
-            <p>The purpose of this project was to analyze cellular data from breast tumors and determine if it is possible to predict whether the tumor is malignanet or benign.</p>
-            <p>The dataset is from <a href="https://www.kaggle.com/uciml/breast-cancer-wisconsin-data/">Breast Cancer Wisconsin (Diagnostic) Data Set</a></p>
-          </article>
+            <article class="description-content">
+                <h1 class="description-header">Distribution of Mean Features</h1>
+                <hr class="description-hr"/>
+                <img src="static/images/texture_mean_plot.png" alt="" class="img-responsive"/>
+                <br>
+                <h1 class="description-header">Distribution of Standard Error Features</h1>
+                <hr class="description-hr"/>
+                <img src="static/images/texture_se_plot.png" alt="" class="img-responsive"/>
+                <br>
+                <h1 class="description-header">Distribution of Worst Features</h1>
+                <hr class="description-hr"/>
+                <img src="static/images/texture_worst_plot.png" alt="" class="img-responsive"/>
+              </article>
         </div>
         <div class="col-md-4">
 
           <!-- Start of Visualizations imageNav Area -->
           <section id="imageNav-area">
             <div class="imageNav-content">
-              <h2 class="imageNav-header">Visualizations</h2>
+              <h2 class="imageNav-header">Pages</h2>
               <hr />
               <div id="images">
-                <a href="visualizations/tree_mean"><img src="./static/images/tree_mean.png" alt="Mean Features Decision Tree" class="imageNav-photo"></a>
-                <a href="visualizations/tree_all"><img src="static/images/tree_all.png" alt="All Features Decision Tree" class="imageNav-photo"></a>
-                <a href="visualizations/knn_unscaled"><img src="static/images/knn_unscaled.png" alt="Unscaled Nearest Neighbors" class="imageNav-photo"></a>
-                <a href="visualizations/knn_scaled"><img src="static/images/knn_scaled.png" alt="Scaled Nearest Neighbors" class="imageNav-photo"></a>
+                <a href="visualizations"><img src="static/images/perimeter_mean_plot.png" alt="Visualizations" class="imageNav-photo"></a>
+                <a href="correlation"><img src="static/images/corr_mean.png" alt="Correlations" class="imageNav-photo"></a>
+                <a href="tree_mean"><img src="static/images/tree_mean.png" alt="Mean Features Decision Tree" class="imageNav-photo"></a>
+                <a href="tree_all"><img src="static/images/tree_all.png" alt="All Features Decision Tree" class="imageNav-photo"></a>
+                <a href="knn_unscaled"><img src="static/images/knn_unscaled.png" alt="Unscaled Nearest Neighbors" class="imageNav-photo"></a>
+                <a href="knn_scaled"><img src="static/images/knn_scaled.png" alt="Scaled Nearest Neighbors" class="imageNav-photo"></a>
               </div>
             </div>
           </section>

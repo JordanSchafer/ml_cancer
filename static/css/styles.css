@@ -238,36 +238,3 @@ body {
 
 /* ----COMPARISON END---- */
 
-/* ----FOOTER START---- */
-.footer {
-  /* Positioning */
-  position: absolute;
-  bottom: 0;
-
-  /* Box-model */
-  width: 100%;
-  height: 60px;
-  margin-top: 30px;
-
-  /* Visual */
-  background-color: #666;
-}
-
-.text-muted-footer {
-  /* Positioning */
-  margin-top: 15px;
-
-  /* Typography */
-  color: #fff;
-}
-
-.two-toned-footer-color {
-  /* Box-model */
-  height: 6px;
-  padding-top: 3px;
-
-  /* Visual */
-  background-color: #4aaaa5;
-}
-
-/* ----FOOTER END---- */
