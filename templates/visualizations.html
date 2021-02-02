@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Bootstrap Visualization Dashboard</title>
+    <title>Visualizations</title>
 
     <!-- Boostrap Stylesheet -->
     <link rel="stylesheet" href="static/css/bootstrap.min.css" media="screen">
@@ -65,15 +65,51 @@
             <article class="description-content">
                 <h1 class="description-header">Distribution of Mean Features</h1>
                 <hr class="description-hr"/>
-                <img src="static/images/texture_mean_plot.png" alt="" class="img-responsive"/>
+                <select id="mean_sel">
+                  <option value="radius_mean" selected>radius_mean</option>
+                  <option value="texture_mean">texture_mean</option>
+                  <option value="perimeter_mean">perimeter_mean</option>
+                  <option value="area_mean">area_mean</option>
+                  <option value="smoothness_mean">smoothness_mean</option>
+                  <option value="compactness_mean">compactness_mean</option>
+                  <option value="concavity_mean">concavity_mean</option>
+                  <option value="concave points_mean">concave points_mean</option>
+                  <option value="symmetry_mean">symmetry_mean</option>
+                  <option value="fractal_dimension_mean">fractal_dimension_mean</option>
+                </select>
+                <img src="static/images/radius_mean_plot.png" id="mean_img" alt="" class="img-responsive"/>
                 <br>
                 <h1 class="description-header">Distribution of Standard Error Features</h1>
                 <hr class="description-hr"/>
-                <img src="static/images/texture_se_plot.png" alt="" class="img-responsive"/>
+                <select id="se_sel">
+                  <option value="radius_se" selected>radius_se</option>
+                  <option value="texture_se">texture_se</option>
+                  <option value="perimeter_se">perimeter_se</option>
+                  <option value="area_se">area_se</option>
+                  <option value="smoothness_se">smoothness_se</option>
+                  <option value="compactness_se">compactness_se</option>
+                  <option value="concavity_se">concavity_se</option>
+                  <option value="concave points_se">concave points_se</option>
+                  <option value="symmetry_se">symmetry_se</option>
+                  <option value="fractal_dimension_se">fractal_dimension_se</option>
+                </select>
+                <img src="static/images/radius_se_plot.png" id="se_img" alt="" class="img-responsive"/>
                 <br>
                 <h1 class="description-header">Distribution of Worst Features</h1>
                 <hr class="description-hr"/>
-                <img src="static/images/texture_worst_plot.png" alt="" class="img-responsive"/>
+                <select id="worst_sel">
+                  <option value="radius_worst" selected>radius_worst</option>
+                  <option value="texture_worst">texture_worst</option>
+                  <option value="perimeter_worst">perimeter_worst</option>
+                  <option value="area_worst">area_worst</option>
+                  <option value="smoothness_worst">smoothness_worst</option>
+                  <option value="compactness_worst">compactness_worst</option>
+                  <option value="concavity_worst">concavity_worst</option>
+                  <option value="concave points_worst">concave points_worst</option>
+                  <option value="symmetry_worst">symmetry_worst</option>
+                  <option value="fractal_dimension_worst">fractal_dimension_worst</option>
+                </select>
+                <img src="static/images/radius_worst_plot.png" id="worst_img" alt="" class="img-responsive"/>
               </article>
         </div>
         <div class="col-md-4">
@@ -105,6 +141,9 @@
 
     <!-- Bootstrap CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+     <!--Script to change graphs-->
+     <script type="text/javascript" src="../static/js/charts.js"></script>
   </body>
 
 </html>
