@@ -64,8 +64,15 @@
         <div class="col-md-8">
             <article class="description-content">
                 <h1 class="description-header">Conclusion</h1>
-                <p>Coming soon probably around noonish tommorrow!</p>
-                
+                <hr>
+                <h2 class="imageNav-header">Decision Trees and Random Forests</h2>
+                <hr>
+                <p>The decision trees and random forests scored fairly well. The decision tree created using the mean values subset had it's first split on perimeter_mean, which is the average cell perimeter, implying a large importance in of that value. The random forest created using the same subset, also placed importance on perimeter_mean.</p>
+                <p>The decision tree using the noncorrelated subset had it's first split on perimeter_worst, which is the largest cell perimeter, implying a large importance in that value. This same importance is refelected in the random forest for the same data subset.</p>
+                <p>Though both random forests could be overfitting to the data and boosting algorithms could be used to help offset this issue.</p>
+                <h2 class="imageNav-header">K Nearest Neighbors</h2>
+                <hr>
+                <p>Both unscaled and scaled knn scored well. Using the elbow method to determine how many neighbors to use, an appropriate number of neighbors appears to be 7 for both.</p>
               </article>
         </div>
         <div class="col-md-4">
