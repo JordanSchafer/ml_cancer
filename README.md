@@ -1,4 +1,4 @@
-# ml_cancer
+# Predicting Cancer with machine learning
 Final Project: Utilize machine learning algorithms to predict cancer
 
 
