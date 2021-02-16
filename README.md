@@ -23,12 +23,10 @@ Due to the high correlation between radius, area, and perimeter and  concavity, 
 ## Decision Tree and Random Forest
 
 Using scikit-learn's decision tree classifier, a decision tree was created with a score of 0.929
-
 ![Decision Tree](/static/images/tree_all.png)
 
 Using scikit-learn's random forest with a n=200, a random forest was created with a score of 0.989.
-
-![Random Forest Importance](/static/images/importances_all.png)
+![Random Forest Importance](/static/images/importance_all.png)
 
 ## K Nearest Neighbor
 
