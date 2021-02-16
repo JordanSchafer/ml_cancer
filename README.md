@@ -32,9 +32,11 @@ Using scikit-learn's random forest with a n=200, a random forest was created wit
 
 Using sci-kit learn's K nearest neighbor, for both scaled and unscaled data, 7 was determined to be the optimal number of neighbors to use.
 THe unscaled version had a test score of 0.924 at 7 neighbors.
+
 ![Unscaled Nearest Neighbor](/static/images/knn_unscaled.png)
 
 The scaled version had a test score of 0.953 at 7 neighbors.
+
 ![Scaled Nearest Neighbor](/static/images/knn_scaled.png)
 
 ## Conclusion
